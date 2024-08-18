@@ -41,7 +41,7 @@ A neural network is employed to approximate the policy function $g(x)$ by minimi
 
 $$\sum_{i=1}^{N} \epsilon_i^2 = \sum_{i=1}^{N} \left[ F_y(x_i, g(x_i)) + \beta F_x(g(x_i), g(g(x_i))) \right]^2$$
 
-The neural network is trained using samples of $\x_i$ to approximate the policy function.
+The neural network is trained using samples of $\x_{i}$ to approximate the policy function.
 
 ### Case Study: Neoclassical Growth Model
 
