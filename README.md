@@ -28,9 +28,7 @@ The project addresses a representative agent's problem in a dynamic setting:
 
 subject to the constraint:
 
-$
-x_{t+1} \in \Gamma(x_t), \forall t \geq 0
-$
+$$ x_{t+1} \in \Gamma(x_t), \forall t \geq 0 $$
 
 This problem can be reformulated using the Bellman equation as:
 
