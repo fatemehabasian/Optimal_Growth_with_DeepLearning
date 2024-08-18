@@ -22,10 +22,9 @@ This repository contains the implementation of a project focused on solving dyna
 ### Problem Statement
 
 The project addresses a representative agent's problem in a dynamic setting:
-
-$
+\[
 \max_{x_t} \sum_{t=0}^{\infty} \beta^t F(x_t, x_{t+1})
-$
+\]
 
 subject to the constraint:
 
