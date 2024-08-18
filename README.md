@@ -22,9 +22,8 @@ This repository contains the implementation of a project focused on solving dyna
 ### Problem Statement
 
 The project addresses a representative agent's problem in a dynamic setting:
-\[
-\max_{x_t} \sum_{t=0}^{\infty} \beta^t F(x_t, x_{t+1})
-\]
+
+$$\max_{x_t} \sum_{t=0}^{\infty} \beta^t F(x_t, x_{t+1})$$
 
 subject to the constraint:
 
@@ -32,29 +31,23 @@ $$ x_{t+1} \in \Gamma(x_t), \forall t \geq 0 $$
 
 This problem can be reformulated using the Bellman equation as:
 
-$
-V(x) = \max_{y \in \gamma(x)} \left\{ F(x, y) + \beta V(y) \right\}
-$
+$$ V(x) = \max_{y \in \gamma(x)} \left\{ F(x, y) + \beta V(y) \right\} $$
 
-The goal is to solve this problem by finding the policy function \(g(x)\) that maximizes the agent's utility over time.
+The goal is to solve this problem by finding the policy function $ g(x) $ that maximizes the agent's utility over time.
 
 ### Neural Network Approach
 
-A neural network is employed to approximate the policy function \(g(x)\) by minimizing the residuals of the Euler equation:
+A neural network is employed to approximate the policy function $g(x)$ by minimizing the residuals of the Euler equation:
 
-$
-\sum_{i=1}^{N} \epsilon_i^2 = \sum_{i=1}^{N} \left[ F_y(x_i, g(x_i)) + \beta F_x(g(x_i), g(g(x_i))) \right]^2
-$
+$$ \sum_{i=1}^{N} \epsilon_i^2 = \sum_{i=1}^{N} \left[ F_y(x_i, g(x_i)) + \beta F_x(g(x_i), g(g(x_i))) \right]^2 $$
 
-The neural network is trained using samples of \(x_i\) to approximate the policy function.
+The neural network is trained using samples of $ \x_i $ to approximate the policy function.
 
 ### Case Study: Neoclassical Growth Model
 
 The project applies the above method to solve a neoclassical growth model, where the value function is defined as:
 
-$
-V(k) = \max_{k'} \left\{ U\left(f(k) + (1-\delta)k - k'\right) + \beta V(k') \right\}
-$
+$$ V(k) = \max_{k'} \left\{ U\left(f(k) + (1-\delta)k - k'\right) + \beta V(k') \right\} $$
 
 This involves defining the utility function \(U(\cdot)\), production function \(f(k)\), depreciation rate \(\delta\), and discount factor \(\beta\). The project compares the deep learning approach with traditional methods like value function iteration, policy function iteration, and Euler equation iteration.
 
