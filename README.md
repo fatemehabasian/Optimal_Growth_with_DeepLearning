@@ -41,7 +41,7 @@ A neural network is employed to approximate the policy function $g(x)$ by minimi
 
 $$\sum_{i=1}^{N} \epsilon_i^2 = \sum_{i=1}^{N} \left[ F_y(x_i, g(x_i)) + \beta F_x(g(x_i), g(g(x_i))) \right]^2$$
 
-The neural network is trained using samples of $ \x_i $ to approximate the policy function.
+The neural network is trained using samples of $\x_i$ to approximate the policy function.
 
 ### Case Study: Neoclassical Growth Model
 
@@ -49,7 +49,7 @@ The project applies the above method to solve a neoclassical growth model, where
 
 $$V(k) = \max_{k'} \left\{ U\left(f(k) + (1-\delta)k - k'\right) + \beta V(k') \right\}$$
 
-This involves defining the utility function $U(\cdot)$, production function $f(k)$, depreciation rate $ \delta $, and discount factor $\beta$. The project compares the deep learning approach with traditional methods like value function iteration, policy function iteration, and Euler equation iteration.
+This involves defining the utility function $U(\cdot)$, production function $f(k)$, depreciation rate $\delta$, and discount factor $\beta$. The project compares the deep learning approach with traditional methods like value function iteration, policy function iteration, and Euler equation iteration.
 
 ### Results
 
