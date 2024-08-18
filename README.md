@@ -31,7 +31,7 @@ $$x_{t+1} \in \Gamma(x_t), \forall t \geq 0$$
 
 This problem can be reformulated using the Bellman equation as:
 
-$$V(x) = \max_{y \in \gamma(x)} \left\{ F(x, y) + \beta V(y) \right\}$$
+$$ V(x) = \max_{y \in \gamma(x)} \left\{ F(x, y) + \beta V(y) \right\} $$
 
 The goal is to solve this problem by finding the policy function $g(x)$ that maximizes the agent's utility over time.
 
@@ -47,7 +47,7 @@ The neural network is trained using samples of $x_{i}$ to approximate the policy
 
 The project applies the above method to solve a neoclassical growth model, where the value function is defined as:
 
-$$V(k) = \max_{k'} \left\{ U\left(f(k) + (1-\delta)k - k'\right) + \beta V(k') \right\}$$
+$$V(k) = \max_{k'} \left\{ U\left(f(k) + (1-\delta)k - k'\right) + \beta V(k') \right\} $$
 
 This involves defining the utility function $U(\cdot)$, production function $f(k)$, depreciation rate $\delta$, and discount factor $\beta$. The project compares the deep learning approach with traditional methods like value function iteration, policy function iteration, and Euler equation iteration.
 
